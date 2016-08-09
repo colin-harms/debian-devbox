@@ -1,0 +1,3 @@
+nodes/*.json
+*.lock
+devbox/files/default/*.gz
