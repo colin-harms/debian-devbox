@@ -44,6 +44,7 @@ end
 
 package 'lightdm'
 package 'shutter'
+package 'cinnamon'
 
 include_recipe 'maven'
 include_recipe 'et_gradle'
@@ -59,7 +60,7 @@ basedir = '/home/vagrant'
   remote_file "#{basedir}/#{copyfile}" do
     source "file://#{basedir}/hosthome/#{copyfile}"
     action :create_if_missing
-    only_if { File.exist?("#{basedir}/#{copyfile}") }
+    only_if { File.exist?("#{basedir}/hosthome/#{copyfile}") }
   end
 
 end
